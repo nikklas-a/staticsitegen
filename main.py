@@ -81,6 +81,7 @@ for files in os.listdir('./site/content/'):
                 slug = post['post_slug'],
                 date_generated = today,
                 
+                
                 )
         
         posts.append(post)
@@ -89,7 +90,8 @@ for files in os.listdir('./site/content/'):
         html = index_template.render(
             
             posts=posts,
-            date_generated = today
+            date_generated = today,
+            feed_title = "Feed",
             
             )
         
