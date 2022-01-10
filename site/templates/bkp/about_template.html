@@ -3,45 +3,47 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="author" content="Niklas Arvidsson">
+        <meta name="description" content="{{ description }}">
+        <meta name="author" content="{{ author }}">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title> vb.arvidsson.xyz | About </title>
+        <title> vb.arvidsson.xyz | {{title}} </title>
 
             <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
         <div class="content">
             <header>
-                                <div class="header-left">
-                <!--   [HEADER LEFT] --> 
+                <div class="header-left">
+                           <!--   [HEADER LEFT] --> 
                 </div>
                 <div class="header-right">
                               
                   <nav>
                       <ul> 
+                                                 
                             <li class="nav">                
-                            <a href="/staticsitegen/site/html/index.html">Feed </a>
+                            <a href="index.html">Feed </a>
                             </li>
                         
                             <li class="nav">
-                            <a href="/staticsitegen/site/html/about.html">About</a>
+                            <a href="about.html">About</a>
                             </li>
                        
                         </ul>
+                   
                       </ul>
                     </nav>
                 </div>
             </header>
         <main>
-            <h1>About</h1>
+            <h1>{{title}}</h1>
             <div class="border"></div>
             
             <small class="post_data">
-                Written by: Niklas Arvidsson &ensp; | &ensp;
-                Date created: 2022-01-06 &ensp; | &ensp;
+                Written by: {{ author }} &ensp; | &ensp;
+                Date created: {{ date_created }} &ensp; | &ensp;
                 <a href="mailto:?subject=Check this out&amp;body=http://vb.arvidsson.xyz/about" title="Share by Email">
                     Share
                 </a>
@@ -51,41 +53,25 @@
 
                 <ul>
                     <li>
-                           <h1>Bakgrund</h1>
-
-<p>Blogg om vårt husbygge på Gräskärrsvägen i Alingsås kommun under 2022. </p>
-
-<h1>Om bloggen</h1>
-
-<p>Bloggen genereras av, och är en ursäkt för existens av min <em>static site generator</em>. Den är skriven i Python, Jinja2 och Markdown. Fullstädig källkod för egen användning hittas här: </p>
-
-<p><a href="https://github.com/nikklas-a/staticsitegens" taget="_blank"> https://github.com/nikklas-a/staticsitegen </a></p>
-
-<p><br><br></p>
-
-<pre><code>                            pax vobis
-</code></pre>
- 
+                           {{ article }} 
                     </li>
                 </ul>
         </main>
 
         <footer>
-                        <div class="border"></div>
+            <div class="border"></div>
 
             <div class="footer">
                 <small class="footer-left">
                     <a href="https://github.com/nikklas-a">
-                        <img src="/staticsitegen/site/html/static/icons/githublogo.svg" height="32" width="35" >
+                        <img src="./static/icons/githublogo.svg" height="32" width="35" >
                     </a>
                 </small>
 
                 <small class="footer-right">
-                Made by <a href="mailto:niklas.arvidsson@gmail.com">Niklas Arvidsson</a>  | Last generated: 2022-01-10
+                Made by <a href="mailto:niklas.arvidsson@gmail.com">Niklas Arvidsson</a>  | Last generated: {{date_generated}}
                 </small>
             </div>
-
-
         </footer>
         </div>
     </body>

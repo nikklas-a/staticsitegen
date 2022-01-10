@@ -15,7 +15,27 @@
     <body>
         <div class="content">
             <header>
-                {% include "site/templates/includes/header.html" %}
+                <div class="header-left">
+                  <!--   [HEADER LEFT] -->                
+                </div>
+                <div class="header-right">
+                              
+                  <nav>
+                      <ul> 
+                                                 
+                            <li class="nav">                
+                            <a href="index.html">Feed </a>
+                            </li>
+                        
+                            <li class="nav">
+                            <a href="about.html">About</a>
+                            </li>
+                       
+                        </ul>
+                   
+                      </ul>
+                    </nav>
+                </div>
             </header>
         <main>
 
@@ -46,8 +66,20 @@
 
         </main>
 
-        <footer style="padding-top: 8em;">
-            {% include "site/templates/includes/footer.html" %}
+        <footer>
+            <div class="border"></div>
+
+            <div class="footer">
+                <small class="footer-left">
+                    <a href="https://github.com/nikklas-a">
+                        <img src="./static/icons/githublogo.svg" height="32" width="35" >
+                    </a>
+                </small>
+
+                <small class="footer-right">
+                Made by <a href="mailto:niklas.arvidsson@gmail.com">Niklas Arvidsson</a> | Last generated: {{date_generated}}
+                </small>
+            </div>
         </footer>
         </div>
     </body>

@@ -1,0 +1,27 @@
+            <h1>{{title}}</h1>
+            
+            <div class="border"></div>
+            
+            <small class="post_data">
+               
+                Written by: {{ author }} &ensp; | &ensp;
+                Date created: {{ date_created }} &ensp; | &ensp;
+                Date generated: {{ date_generated }} &ensp; | &ensp;
+            
+                <a href="mailto:?subject=Check this out&amp;body=http://vb.arvidsson.xyz/posts/{{post_slug}}"." title="Share by Email">
+                    Share
+                </a>
+    
+                <hr>
+                
+                Tags: <a href="{{ href }}/sites/html/tags/{{tag_1 | replace(" ", "")}} ">{{ tag_1 }} </a>  &nbsp; | &nbsp; <a href="{{ href }}/sites/html/tags/{{tag_2 | replace(" ", "")}}">{{ tag_2 }}  &nbsp; | &nbsp; <a href="{{ href }}/sites/html/tags/{{tag_3 | replace(" ", "")}}">{{ tag_3 }}</a>
+
+                <br>
+                  
+            </small>
+
+                <ul>
+                    <li>
+                           {{ article }} 
+                    </li>
+                </ul>

@@ -10,15 +10,16 @@ import os, shutil
 import json
 
 root_path = Environment(loader=FileSystemLoader(searchpath='./'))
+
 post_template = root_path.get_template('site/templates/post_template.html')
 about_template = root_path.get_template('site/templates/about_template.html')
 index_template = root_path.get_template('site/templates/index_template.html')
 today = date.today()
 
-
+#json-file used to list published posts. Add/remove from list to add/remove post. 
 input_file = open ('./site/notpostscontent/published.json')
 json_array = json.load(input_file)
-post_list = []
+#post_list = []
 
 # Looks for all files in "site/content/"
 for files in os.listdir('./site/content/'):
@@ -81,7 +82,6 @@ for files in os.listdir('./site/content/'):
                 slug = post['post_slug'],
                 date_generated = today,
                 
-                
                 )
         
         posts.append(post)
@@ -95,12 +95,9 @@ for files in os.listdir('./site/content/'):
             
             )
         
-         
-        
         file.write(html)
         
         print(f"Rendering index-page.")
-    
 
 #Generate about.html  
 #----------------------------------------------------------
@@ -115,9 +112,6 @@ with open('site/notpostscontent/about.json') as about_config_file:
     
     with open('site/html/about.html', 'w') as output_file:
   
-       post_slug_full = config['post_slug']
-       date_created_short = config['date_created']
-       
        output_file.write(
         
         about_template.render(
@@ -127,7 +121,6 @@ with open('site/notpostscontent/about.json') as about_config_file:
             author = config['author'],
             identifier = config['identifier'],
             url = config['url'],
-            post_slug = post_slug_full.replace(" ", "-"), #replaces space with -
             article = article,
             date_created = config['date_created'],
             date_generated = today,
