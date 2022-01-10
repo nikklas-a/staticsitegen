@@ -9,3 +9,7 @@ slug: post-2
 
 # H1 Post nr 2 TEST. 
 Ser du mig?
+
+## Bildtest
+
+<img title="A title" alt="Alt text" src="./img/1.jpg">

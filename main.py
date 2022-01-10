@@ -66,38 +66,53 @@ for files in os.listdir('./site/content/'):
                     tag_3 = config['tag_3'],
             )
 )
-        print(f"Rendered html file: {output_file}")
+
+#exclude_dirs = set(['files', 'img'])
+#filepath = './site/html/posts'  
+#imgpath = './site/html/posts/img'
+      
+#for files in os.listdir(filepath):
+#    
+#    if len(os.path.join(imgpath, files)) == 0:
+#        
+#        if files not in exclude_dirs:
+        
+#            os.mkdir(os.path.join(imgpath, files))
+             
+#            print("Directory '% s' created" % files)
+            
     
 #Generate index.html (feed)       
 #----------------------------------------------------------
-    posts = []
+posts = []
 
-    for post in json_array:
-   
-        post = dict(
-                title = post['post_title'], 
-                summary = post['post_summary'], 
-                date = post['date_created'],
-                author = post['post_author'],
-                slug = post['post_slug'],
-                date_generated = today,
-                
-                )
-        
-        posts.append(post)
+for post in json_array:
 
-    with open('site/html/index.html', 'w+') as file:
-        html = index_template.render(
-            
-            posts=posts,
+    post = dict(
+            title = post['post_title'], 
+            summary = post['post_summary'], 
+            date = post['date_created'],
+            author = post['post_author'],
+            slug = post['post_slug'],
             date_generated = today,
-            feed_title = "Feed",
+            thumbnail = post['thumbnail'],
             
             )
+    
+    posts.append(post)
+
+with open('site/html/index.html', 'w+') as file:
+    html = index_template.render(
         
-        file.write(html)
+        posts=posts,
+        date_generated = today,
+        feed_title = "Feed",
         
-        print(f"Rendering index-page.")
+        )
+    
+    file.write(html)
+    
+    print(f"Rendering index-page.")
 
 #Generate about.html  
 #----------------------------------------------------------
