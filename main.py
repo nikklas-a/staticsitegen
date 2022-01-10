@@ -39,7 +39,7 @@ for files in os.listdir('./site/content/'):
     
      with open(file, 'r') as config_file:
         config = load(config_file)
-        post_slug = config['post_slug'] #auto generate filename ([slut].html) from slug defined in config file. 
+        post_slug = config['post_slug'] #auto generate filename ([slug].html) from slug defined in config file. 
 
         print(f"using config file: {file}")
 
