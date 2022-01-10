@@ -1,0 +1,22 @@
+[
+    {
+        "post_title": "First Static Generated Blog Post",
+        "post_summary": "First static text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "post_slug" : "post-1", 
+        "post_author" : "Niklas",
+        "tag_1" : "Introduktion",
+        "tag_2" : "Planering",
+        "tag_3" : "Budget",
+        "post_id": 1,
+        "thumbnail" : "img/1.jpg",
+        "date_created" : "2020-01-01"
+    }
+
+
+
+
+]
+
+
+
+
