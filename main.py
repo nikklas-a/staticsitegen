@@ -53,7 +53,6 @@ for files in os.listdir('./site/content/'):
                     
                     title=config['title'],
                     summary=config['summary'],
-                    thumbnail=config['thumbnail'],
                     author=config['author'],
                     identifier=config['identifier'],
                     url=config['url'],

@@ -1,15 +1,14 @@
 {
-    "title" : "First Static Generated Blog Post",
-    "description" : "My article",
+    "title" : "Hej Världen",
+    "description" : "Blogginlägg",
     "author" : "Niklas",
     "url" : "",
     "identifier" : "",
-    "post_slug" : "post-1", 
-    "tag_1" : "Introduktion",
-    "tag_2" : "Planering",
-    "tag_3" : "Budget",
-    "thumbnail" : "img/doughnuts.jpg",
-    "summary" : "First static text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "date_created" : "2020-01-06"
+    "post_slug" : "hej-vaerlden", 
+    "tag_1" : "",
+    "tag_2" : "",
+    "tag_3" : "",
+    "summary" : "Bloggens första inlägg och introduktion.",
+    "date_created" : "2020-01-10"
 }
 
