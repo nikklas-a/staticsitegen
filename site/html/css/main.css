@@ -170,6 +170,11 @@ h6 {
     font-weight: bold;
 }
 
+h7 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
 pre {
     padding: 1em;
     margin: 1em;
@@ -214,7 +219,7 @@ p > code {
 
 .content {
     margin: 0 auto;
-    width: 860px;
+    width: 1024px;
 }
 
 @media (max-width: 1200px) {

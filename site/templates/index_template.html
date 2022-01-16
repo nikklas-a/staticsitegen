@@ -2,13 +2,10 @@
 <html lang="en">
 
     <head>
-        <meta charset="utf-8">
-        <meta name="description" content="{{ description }}">
-        <meta name="author" content="{{ author }}">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title> vb.arvidsson.xyz | Feed </title>
+        <title> blogg.arvidsson.xyz | Feed </title>
 
             <link rel="stylesheet" href="./css/main.css">
     </head>
@@ -19,7 +16,7 @@
             </header>
         <main>
 
-            <h1>{{feed_title}}</h1>
+            <h7>{{feed_title}}</h7>
             <div class="border"></div>
             
             <small class="post_data">
@@ -32,8 +29,13 @@
                     <li>
                         <h1>{{post.title}}</h1>
                         <small> 
-                            Posted: {{post.date}} <br>
-                            Written by: {{post.author}}<br>
+                            
+                            Posted: {{post.date}} | 
+                            <a href="{{ href }}/staticsitegen/site/html/tags.html#{{post.tag | lower |replace(" ", "")}} ">{{ post.tag }} </a> | 
+                           
+                            Written by: {{post.author}} <br> 
+
+
                         </small><br>
 
                         <img src="{{post.thumbnail}}" style="padding: 20px;" height="200"> <br>  

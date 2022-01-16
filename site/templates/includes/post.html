@@ -1,4 +1,4 @@
-            <h1>{{title}}</h1>
+            <h7>{{title}}</h7>
             
             <div class="border"></div>
             
@@ -13,9 +13,11 @@
                 </a>
     
                 <hr>
-                
-                Tags: <a href="{{ href }}/sites/html/tags/{{tag_1 | replace(" ", "")}} ">{{ tag_1 }} </a>  &nbsp; | &nbsp; <a href="{{ href }}/sites/html/tags/{{tag_2 | replace(" ", "")}}">{{ tag_2 }}</a>  &nbsp; | &nbsp; <a href="{{ href }}/sites/html/tags/{{tag_3 | replace(" ", "")}}">{{ tag_3 }}</a>
 
+          
+                Tag <a href="{{ href }}/staticsitegen/site/html/tags.html#{{tag | lower |replace(" ", "")}} ">{{ tag }} </a> | 
+                           
+                <br>    
                 <br>
                   
             </small>

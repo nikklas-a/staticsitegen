@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title> blogg.arvidsson.xyz | {{title}} </title>
+
+            <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <div class="content">
+            <header>
+                {% include "site/templates/includes/header.html" %}
+            </header>
+            <style>
+                table, th, td {
+                  border:1px solid black;
+                }
+
+                th, td {
+
+                    width: 250px;
+                    height: 30px;
+                    padding: 5px;
+                }
+                </style>
+        <main>
+            <h7>{{tags_title}}</h7>
+            <div class="border"></div>
+                <ul>
+                    <li>
+                        {% for tag in tags %}
+                        <h2><p id="{{tag.tag | lower}}">{{tag.tag}}</h2>
+                            <table style:"width: 100%">
+                                <tr>
+                                    <th>Title</th> 
+                                    <th>Date</th> 
+                                    </tr>
+                                
+                                <tr>
+                                    
+                                    {% for post in posts %}
+                                    {% if post.tag == tag.tag %} 
+                                    
+                                    
+                                    <td> 
+                                    <a href="{{ href }}/staticsitegen/site/html/posts/{{post.slug}}.html"> {{post.title}}
+                                    </td>
+
+                                    <td> 
+                                        {{post.date}} </a> 
+                                    </td>
+                                    
+                                  
+                                </tr>   
+                              
+                            
+                                {% endif %}  
+                            {% endfor %}
+                        </table>
+                        {% endfor %}
+                    </li>
+                </ul>
+        </main>
+
+        <footer>
+            {% include "site/templates/includes/footer.html" %}
+        </footer>
+        </div>
+    </body>
+</html>

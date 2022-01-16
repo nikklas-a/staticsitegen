@@ -5,9 +5,7 @@
     "url": "",
     "identifier" : "",
     "post_slug" : "about", 
-    "tag_1" : "Om",
-    "tag_2" : "Byggdagbok",
-    "tag_3" : "",
+    "tag" : "Om",
     "thumbnail" : "img/familj.jpg",
     "date_created" : "2022-01-06"
 }

@@ -1,19 +1,17 @@
 [
 
     {
-        "post_title": "Hej Världen",
-        "post_summary": "Bloggens första inlägg och introduktion.",
+        "title" : "Hej Världen",
+        "description" : "Blogginlägg",
+        "author" : "Niklas",
+        "url" : "",
         "post_slug" : "hej-vaerlden", 
-        "post_author" : "Niklas",
-        "tag_1" : "",
-        "tag_2" : "",
-        "tag_3" : "",
-        "post_id": 1,
-        "thumbnail" : "./posts/img/1.jpg",
-        "date_created" : "2020-01-10"
+        "tag" : "Tidplan",
+        "summary" : "Bloggens första inlägg och introduktion.",
+        "date_created" : "2020-01-10",
+        "thumbnail" : "./posts/img/1.jpg"
+        
     }
+  
+    ]
 
-   
-
-
-]

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title> blogg.arvidsson.xyz | {{title}} </title>
+
+            <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+
+        <div class="content">
+            
+            <header>
+                <style>
+                    .container {
+                    margin-top:0px;
+                    margin-left:0px;
+                    }
+
+                    .container ul li {
+                    margin:55px;
+                    padding-bottom:100px;
+                    padding-right: 5px;
+                    width: max-content;
+                    height:100px;
+                    float: left; 
+                    list-style:none;
+                    }
+                  
+                 </style>
+
+                {% include "site/templates/includes/header.html" %}
+
+            </header>
+            
+            <main>
+
+                <h7>{{title}}</h7>
+                <div class="border"></div>
+                    <small>
+
+                    </small>
+                            
+                    <div class="container">
+                        <ul>
+                            
+                        {% for image in images %}
+
+                        <li>
+                            <a href="./posts/img/{{image}}" target="_blank"> <img src="./posts/img/{{image}}" style="padding: 20px;" height="300"></a>
+
+                        </li>
+
+                        {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    
+        <footer style="padding-top: 8em;">
+            {% include "site/templates/includes/footer.html" %}
+        </footer>
+    </div>
+    </body>
+</html>
+
