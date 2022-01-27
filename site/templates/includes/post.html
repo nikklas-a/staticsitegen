@@ -1,4 +1,4 @@
-            <h1>{{title}}</h1>
+            <h7>Arvidssons Husbygge</h7>
             
             <div class="border"></div>
             
@@ -8,14 +8,16 @@
                 Date created: {{ date_created }} &ensp; | &ensp;
                 Date generated: {{ date_generated }} &ensp; | &ensp;
             
-                <a href="mailto:?subject=Check this out&amp;body=http://vb.arvidsson.xyz/posts/{{post_slug}}"." title="Share by Email">
+                <a href="mailto:?subject=blogg.arvidsson.xyz&amp;body=http://blogg.arvidsson.xyz/posts/{{post_slug}}"." title="Share by Email">
                     Share
                 </a>
     
                 <hr>
-                
-                Tags: <a href="{{ href }}/sites/html/tags/{{tag_1 | replace(" ", "")}} ">{{ tag_1 }} </a>  &nbsp; | &nbsp; <a href="{{ href }}/sites/html/tags/{{tag_2 | replace(" ", "")}}">{{ tag_2 }}</a>  &nbsp; | &nbsp; <a href="{{ href }}/sites/html/tags/{{tag_3 | replace(" ", "")}}">{{ tag_3 }}</a>
 
+          
+                Tag <a href="{{ href }}/tags.html#{{tag | lower |replace(" ", "")}} ">{{ tag }} </a> | 
+                           
+                <br>    
                 <br>
                   
             </small>

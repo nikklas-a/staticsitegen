@@ -2,13 +2,10 @@
 <html lang="en">
 
     <head>
-        <meta charset="utf-8">
-        <meta name="description" content="{{ description }}">
-        <meta name="author" content="{{ author }}">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title> vb.arvidsson.xyz | Feed </title>
+        <title> blogg.arvidsson.xyz | Home </title>
 
             <link rel="stylesheet" href="./css/main.css">
     </head>
@@ -19,7 +16,7 @@
             </header>
         <main>
 
-            <h1>{{feed_title}}</h1>
+            <h7>{{feed_title}}</h7>
             <div class="border"></div>
             
             <small class="post_data">
@@ -30,18 +27,27 @@
                 {% for post in posts %}
                 <ul>
                     <li>
+                        <br>
                         <h1>{{post.title}}</h1>
                         <small> 
-                            Posted: {{post.date}} <br>
-                            Written by: {{post.author}}<br>
-                        </small><br>
+                            
+                            Posted: {{post.date}} | 
+                            <a href="{{ href }}/tags.html#{{post.tag | lower |replace(" ", "")}} ">{{ post.tag }} </a> | 
+                           
+                            Written by: {{post.author}} <br> 
 
-                        <img src="{{post.thumbnail}}" style="padding: 20px;" height="200"> <br>  
 
-                        {{post.summary}} <br> <br>
+                        </small>
+                        <br>
+
+                        <img src="{{post.thumbnail}}" style="padding: 20px;" height="350"> <br>  
+
+                        <p>{{post.summary}} <br> <br></p>
                          
-                        <a href="{{ href }}/staticsitegen/site/html/posts/{{post.slug}}.html"> More... </a> <br>
-                        <hr>
+                        <a href="{{ href }}/posts/{{post.slug}}.html"> More... </a> <br>
+                       
+                        <div class="border" style="border-top: 2px dotted;"></div>
+            
 
                     </li>
                 </ul>

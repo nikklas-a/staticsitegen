@@ -3,12 +3,9 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="{{ description }}">
-        <meta name="author" content="{{ author }}">
-        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title> vb.arvidsson.xyz | {{title}} </title>
+        <title> blogg.arvidsson.xyz | {{title}} </title>
 
             <link rel="stylesheet" href="./css/main.css">
     </head>
@@ -18,20 +15,10 @@
                 {% include "site/templates/includes/header.html" %}
             </header>
         <main>
-            <h1>{{title}}</h1>
+            <h7>{{title}}</h7>
             <div class="border"></div>
             
-            <small class="post_data">
-                Written by: {{ author }} &ensp; | &ensp;
-                Date created: {{ date_created }} &ensp; | &ensp;
-                <a href="mailto:?subject=Check this out&amp;body=http://vb.arvidsson.xyz/about" title="Share by Email">
-                    Share
-                </a>
-                <hr>
-                  
-            </small>
-
-                <ul>
+                 <ul>
                     <li>
                            {{ article }} 
                     </li>
