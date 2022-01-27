@@ -18,9 +18,15 @@ about_template = root_path.get_template('site/templates/about_template.html')
 index_template = root_path.get_template('site/templates/index_template.html')
 gallery_template = root_path.get_template('site/templates/gallery_template.html')
 tags_template = root_path.get_template('site/templates/tags_template.html')
+<<<<<<< HEAD
 bloggtitel = "Arvidssons Husbygge"
 today = date.today()
 
+=======
+
+today = date.today()
+
+>>>>>>> 33c6d1874f16fc6d4f1a629eca3d34887b7044d7
 # Looks for all files in "site/content/"
 for files in os.listdir('./site/content/'):
     file = os.path.join('./site/content/', files)
@@ -85,6 +91,11 @@ for post in json_array:
             date_generated = today,
             thumbnail = post['thumbnail'],
             tag = post['tag'],
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 33c6d1874f16fc6d4f1a629eca3d34887b7044d7
             )
     
     posts.append(post)
@@ -153,6 +164,7 @@ with open('site/notpostscontent/about.json') as about_config_file:
 images = []
     
 imagespath = './site/html/posts/img/'  
+<<<<<<< HEAD
 number_images = next(os.walk(imagespath))[2]
       
 for image in os.listdir(imagespath):
@@ -174,3 +186,22 @@ for image in os.listdir(imagespath):
             
         print("Rendering gallery.")
            
+=======
+      
+for image in os.listdir(imagespath):
+    
+    images.append(image)
+
+    with open('site/html/gallery.html', 'w') as file:
+               
+        html = gallery_template.render(
+                
+            images = images,
+            title = "Gallery",
+
+        )          
+       
+        file.write(html)
+    
+print("Rendering gallery.")
+>>>>>>> 33c6d1874f16fc6d4f1a629eca3d34887b7044d7

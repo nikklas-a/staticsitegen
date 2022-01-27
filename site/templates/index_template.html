@@ -5,7 +5,11 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<<<<<<< HEAD
         <title> blogg.arvidsson.xyz | Home </title>
+=======
+        <title> blogg.arvidsson.xyz | Feed </title>
+>>>>>>> 33c6d1874f16fc6d4f1a629eca3d34887b7044d7
 
             <link rel="stylesheet" href="./css/main.css">
     </head>
@@ -32,9 +36,18 @@
                         <small> 
                             
                             Posted: {{post.date}} | 
+<<<<<<< HEAD
                             <a href="{{ href }}/tags.html#{{post.tag | lower |replace(" ", "")}} ">{{ post.tag }} </a> | 
                            
                             Written by: {{post.author}} <br> 
+=======
+                            <a href="{{ href }}/staticsitegen/site/html/tags.html#{{post.tag | lower |replace(" ", "")}} ">{{ post.tag }} </a> | 
+                           
+                            Written by: {{post.author}} <br> 
+
+
+                        </small><br>
+>>>>>>> 33c6d1874f16fc6d4f1a629eca3d34887b7044d7
 
 
                         </small>

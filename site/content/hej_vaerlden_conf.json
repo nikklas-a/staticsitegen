@@ -4,7 +4,11 @@
     "author" : "Niklas",
     "url" : "",
     "post_slug" : "hej-vaerlden", 
+<<<<<<< HEAD:site/content/hej_vaerlden_conf.json
     "tag" : "Inledning",
+=======
+    "tag" : "Tidplan",
+>>>>>>> 33c6d1874f16fc6d4f1a629eca3d34887b7044d7:site/content/post_1_conf.json
     "summary" : "Bloggens första inlägg och introduktion.",
     "date_created" : "2020-01-10",
     "thumbnail" : ""
